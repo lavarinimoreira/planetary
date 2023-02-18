@@ -1,24 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import Content from "./components/Content";
+import { TApod } from "./model";
+import "./sky.css";
+import "./styles.css";
 
 function App() {
+  const [dataPhoto, setDataPhoto] = useState<TApod>({
+    copyright: "",
+    date: "",
+    explanation: "",
+    hdurls: "",
+    media_type: "",
+    service_version: "",
+    title: "",
+    url: "",
+  });
+  const [options, setOptions] = useState({
+    url: "http://localhost:8000/apod",
+  });
+
+  useEffect(() => {
+    axios
+      .request(options)
+      .then((response) => {
+        console.log(response.data);
+        setDataPhoto(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Content />
+
+      <div className="aeroship"></div>
+      <div className="hills"></div>
     </div>
   );
 }
