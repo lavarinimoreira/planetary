@@ -10,7 +10,7 @@ function App() {
     copyright: "",
     date: "",
     explanation: "",
-    hdurls: "",
+    hdurl: "",
     media_type: "",
     service_version: "",
     title: "",
@@ -24,7 +24,7 @@ function App() {
     axios
       .request(options)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         setDataPhoto(response.data);
       })
       .catch((error) => {
@@ -34,7 +34,13 @@ function App() {
 
   return (
     <div className="App">
-      <Content />
+      <Content
+        copyright={dataPhoto.copyright}
+        image={dataPhoto.hdurl}
+        title={dataPhoto.title}
+        date={dataPhoto.date}
+        explanation={dataPhoto.explanation}
+      />
 
       <div className="aeroship"></div>
       <div className="hills"></div>
