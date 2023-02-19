@@ -3,11 +3,12 @@
 .Content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     margin: 5% 0 0 0;
     color: #46485a;
     font-family: 'Red Hat Text';
+
 }
 
 .img {
@@ -23,7 +24,7 @@
 }
 
 .title {
-    margin: 0 0 0 5%;
+    margin: 0 0 0 0;
     font-size: 0.8em;
     font-weight: bold;
     color: #fff;
@@ -38,7 +39,7 @@
 
 .copyright {
     align-self: flex-start;
-    margin: 0 0 0 5%;
+    margin: 0 0 0 0;
     font-size: 0.8em;
     font-weight: 600;
     color: #fb6087;

@@ -6,8 +6,11 @@
     justify-content: center;
 }
 
+.aeroship {
+    height: 50%;
+}
 
 .hills {
-    grid-column: span 2;
+    grid-column: span 4;
     grid-row: span 2;
 }
