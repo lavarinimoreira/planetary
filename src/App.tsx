@@ -29,6 +29,7 @@ function App() {
   const [options, setOptions] = useState({
     url: "http://localhost:8000/apod",
   });
+  const [titleClicked, setTitleClicked] = useState(false);
 
   useEffect(() => {
     axios
@@ -44,7 +45,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="title">
+      <h1
+        onClick={() => setTitleClicked(!titleClicked)}
+        className={titleClicked === true ? "title-clicked title" : "title"}
+      >
         Astronomy Picture
         <br /> of the Day
       </h1>
