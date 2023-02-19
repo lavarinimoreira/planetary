@@ -11,6 +11,7 @@ import {
 import { Canvas } from "@react-three/fiber";
 import "./sky.css";
 import "./styles.css";
+import Footer from "./components/Footer";
 
 function App() {
   const spaceShip = useGLTF(
@@ -162,6 +163,7 @@ function App() {
         />
       </div>
       {/* <div className="hills"></div> */}
+      <Footer />
     </div>
   );
 }

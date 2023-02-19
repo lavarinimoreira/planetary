@@ -9,7 +9,8 @@ body {
     animation: animateBg linear 90s infinite alternate;
     height: 100vh;
     font-family: 'Red Hat Text', sans-serif;
-    overflow-x: hidden
+
+    overflow: hidden;
 }
 
 @keyframes animateBg {
