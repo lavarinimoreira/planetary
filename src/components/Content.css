@@ -3,27 +3,28 @@
 .Content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin: 5% 0 0 0;
+    align-items: center;
+    /* width: 100%; */
+    margin: 5% 5% 0 0;
     color: #46485a;
     font-family: 'Red Hat Text';
-
 }
 
 .img {
-    width: 90%;
-    height: 20em;
+    width: 50%;
+    /* height: 30em; */
     border-radius: 4px;
 }
 
 .h1h2 {
     margin: 1px 0 0 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
-.title {
+.title-component {
     margin: 0 0 0 0;
     font-size: 0.8em;
     font-weight: bold;
@@ -31,14 +32,13 @@
 }
 
 .date {
-    margin: 0 5% 0 8px;
+    margin: 0 0 0 8px;
     font-size: 0.8em;
     font-weight: bold;
     color: #fb6087;
 }
 
 .copyright {
-    align-self: flex-start;
     margin: 0 0 0 0;
     font-size: 0.8em;
     font-weight: 600;
@@ -55,7 +55,7 @@
 .explanation {
     margin: 1em 0 0 0;
     text-align: justify;
-    width: 90%;
+    width: 80%;
     text-indent: 2em;
     font-size: 0.9em;
     line-height: 1.2em;

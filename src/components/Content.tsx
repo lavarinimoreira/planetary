@@ -20,7 +20,7 @@ const Content: React.FC<Props> = ({
     <div className="Content">
       <img className="img" src={image} />
       <div className="h1h2">
-        <h1 className="title">"{title}"</h1>
+        <h1 className="title-component">"{title}"</h1>
         <h2 className="date">{date}.</h2>
       </div>
       {copyright ? (
